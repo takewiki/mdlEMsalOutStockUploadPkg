@@ -4,12 +4,12 @@
 \alias{dms_sal_outStock_view}
 \title{查询dms 表头更新状态}
 \usage{
-dms_sal_outStock_view(dms_token, FBillNo)
+dms_sal_outStock_view(dms_token, FBillNo, FStartDate, FEndDate)
 }
 \arguments{
 \item{dms_token}{}
 
-\item{FBillNo}{}
+\item{FEndDate}{}
 }
 \value{
 无返回值

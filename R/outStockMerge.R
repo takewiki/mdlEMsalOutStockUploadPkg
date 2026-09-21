@@ -90,15 +90,17 @@ dms_sal_outStockEntry_upload<- function(dms_token) {
 #' @param dms_token
 #'
 #' @param FBillNo
+#' @param FStartDate
+#' @param FEndDate
 #'
 #' @return 无返回值
 #' @export
 #'
 #' @examples
 #' dms_sal_outStock_view()
-dms_sal_outStock_view<- function(dms_token,FBillNo) {
+dms_sal_outStock_view<- function(dms_token,FBillNo,FStartDate,FEndDate) {
 
-  sql=paste0("exec rds_proc_dms_salOutStock_view  '",FBillNo,"' ")
+  sql=paste0("exec rds_proc_dms_salOutStock_view  '",FBillNo,"','",FStartDate,"','",FEndDate,"' ")
 
   res=tsda::sql_select2(token = dms_token,sql = sql)
   return(res)
